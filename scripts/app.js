@@ -1,8 +1,8 @@
-import 'styles/style.config.less!';
-
 import angular from 'angular';
 import 'angular-ui-router';
-import routeConfig from './router.js';
+
+import routeConfig from './app.router.js';
+
 import MainController from './controllers/mainController.js';
 import AboutController from './controllers/aboutController.js';
 
