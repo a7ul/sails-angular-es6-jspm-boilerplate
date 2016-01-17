@@ -18,17 +18,18 @@
     "gulp-clean": "^0.3.1",
     "gulp-concat": "^2.6.0",
     "gulp-html-replace": "^1.5.5",
+    "gulp-inject": "^3.0.0",
     "gulp-jspm-build": "0.0.13",
     "gulp-minify-css": "^1.2.3",
     "gulp-shell": "^0.5.1",
+    "gulp-watch": "^4.3.5",
     "jspm": "^0.16.23"
   },
   "jspm": {
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.4.8",
       "angular-ui-router": "github:angular-ui/ui-router@^0.2.15",
-      "css": "github:systemjs/plugin-css@^0.1.20",
-      "less": "github:aaike/jspm-less-plugin@^0.0.5"
+      "css": "github:systemjs/plugin-css@^0.1.20"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
@@ -36,5 +37,7 @@
       "core-js": "npm:core-js@^1.1.4"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "browser-sync": "^2.11.1"
+  }
 }

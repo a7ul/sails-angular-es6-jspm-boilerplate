@@ -20,10 +20,6 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.34",
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.20",
-    "less": "github:aaike/jspm-less-plugin@0.0.5",
-    "github:aaike/jspm-less-plugin@0.0.5": {
-      "less.js": "github:distros/less@2.4.0"
-    },
     "github:angular-ui/ui-router@0.2.15": {
       "angular": "github:angular/bower-angular@1.4.8"
     },

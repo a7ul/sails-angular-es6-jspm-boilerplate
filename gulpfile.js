@@ -6,11 +6,51 @@ var autoprefixer = require('gulp-autoprefixer');
 var shell = require('gulp-shell');
 var clean = require('gulp-clean');
 var htmlreplace = require('gulp-html-replace');
+var browserSync = require('browser-sync').create();
+var inject = require('gulp-inject');
+var watch = require('gulp-watch');
 
 var options = {
   src: './',
   dest: 'dist/'
 };
+
+gulp.task('live-reload', ['inject-css'], browserSync.reload);
+
+gulp.task('inject-css', function() {
+  var target = gulp.src(options.src + 'index.html');
+  var sources = gulp.src([options.src + 'styles/**/*.css'], {
+    read: false
+  });
+  return target.pipe(inject(sources))
+    .pipe(gulp.dest(options.src));
+});
+
+gulp.task('serve', ['inject-css'], function() {
+  browserSync.init({
+    server: {
+      baseDir: options.src
+    }
+  });
+
+  var filesToWatch = [
+    options.src + 'assets/**/*',
+    options.src + 'views/**/*',
+    options.src + 'scripts/**/*',
+    options.src + 'styles/**/*',
+    'config.js'
+  ];
+
+  watch(filesToWatch, function(data) {
+    console.log('Files changed : ', data.toString().slice(0,20));
+    gulp.start('live-reload');
+    console.log('Done ! ');
+  });
+
+});
+
+
+//===================== BUILD GULP TASKS =======================
 
 gulp.task('css', ['clean'], function() {
   gulp.src(options.src + 'styles/**/*.css')
@@ -48,6 +88,7 @@ gulp.task('replace-scripts-and-styles', ['clean'], function() {
     }))
     .pipe(gulp.dest(options.dest));
 });
+
 
 gulp.task('build', [
   'clean',
