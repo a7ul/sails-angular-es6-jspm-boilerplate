@@ -1,0 +1,32 @@
+{
+  "name": "partner-leaderboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://githuben.intranet.mckinsey.com/MDX/Partner-Leaderboard.git"
+  },
+  "author": "Atul R <atulanand94@gmail.com> (http://atulr.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "jspm": "^0.16.23"
+  },
+  "jspm": {
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.4.8",
+      "angular-ui-router": "github:angular-ui/ui-router@^0.2.15",
+      "css": "github:systemjs/plugin-css@^0.1.20",
+      "less": "github:aaike/jspm-less-plugin@^0.0.5"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "dependencies": {}
+}
