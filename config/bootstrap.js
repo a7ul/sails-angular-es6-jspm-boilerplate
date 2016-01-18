@@ -8,7 +8,12 @@
  * For more information on bootstrapping your app, check out:
  * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.bootstrap.html
  */
-
+ require('babel-register')({
+   retainLines: true,
+   presets: ['es2015']
+ });
+ require('babel-polyfill');
+ 
 module.exports.bootstrap = function(cb) {
 
   // It's very important to trigger this callback method when you are finished
