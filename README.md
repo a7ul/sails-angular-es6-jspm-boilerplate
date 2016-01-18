@@ -1,4 +1,4 @@
-# Partner Leaderboard
+# Sails Angular Es6 JSPM boilerplate
 Steps:
 
 1.npm install

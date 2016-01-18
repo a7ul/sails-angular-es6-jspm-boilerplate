@@ -1,14 +1,10 @@
 {
-  "name": "partner-leaderboard",
+  "name": "boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "jspmBundle": "jspm bundle-sfx scripts/app.js dist/scripts/script.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://githuben.intranet.mckinsey.com/MDX/Partner-Leaderboard.git"
   },
   "author": "Atul R <atulanand94@gmail.com> (http://atulr.com)",
   "license": "ISC",

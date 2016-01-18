@@ -1,5 +1,5 @@
 {
-  "name": "prac",
+  "name": "boilerplate",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
@@ -31,10 +31,6 @@
     "start": "node app.js"
   },
   "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/atulr/prac.git"
-  },
   "author": "atulr",
   "license": ""
 }
