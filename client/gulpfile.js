@@ -12,7 +12,7 @@ var watch = require('gulp-watch');
 
 var options = {
   src: './',
-  dest: 'dist/'
+  dest: '../assets/public/'
 };
 
 gulp.task('live-reload', ['inject-css'], browserSync.reload);
@@ -66,7 +66,9 @@ gulp.task('clean', function() {
   return gulp.src(options.dest, {
       read: false
     })
-    .pipe(clean());
+    .pipe(clean({
+      force:true
+    }));
 });
 
 gulp.task('copy', ['clean'], function() {
