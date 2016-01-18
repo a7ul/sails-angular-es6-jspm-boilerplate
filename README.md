@@ -1,3 +1,18 @@
-# prac
+# Partner Leaderboard
+Steps:
 
-a [Sails](http://sailsjs.org) application
+1.npm install
+
+2.jspm install
+
+## For frontend
+
+3.cd client
+4.gulp serve
+
+### build
+gulp build
+
+## For backend
+
+3.sails lift
